@@ -9,7 +9,7 @@ import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.Choices;
 import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.Core;
 import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.Unit;
 import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.Word;
-import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.unit.Inhibitor;
+import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.unit.Bang;
 import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.unit.quantifier.OneOrMore;
 import org.x96.sys.foundation.cs.ir.manuscript.manifest.characterization.facet.Mesh;
 import org.x96.sys.foundation.cs.ir.manuscript.manifest.characterization.facet.terminals.Switch;
@@ -24,7 +24,7 @@ class CasingToMeshTest {
                 new Casing(
                         new Core[] {
                             new Unit(
-                                    Optional.of(new Inhibitor('!')),
+                                    Optional.of(new Bang((byte) '!')),
                                     new Glyph("cs".getBytes()),
                                     Optional.empty()),
                             new Choices(

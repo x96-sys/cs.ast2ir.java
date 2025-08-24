@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.x96.sys.foundation.cs.ast.book.passage.glyph.Glyph;
 import org.x96.sys.foundation.cs.ast.book.passage.pattern.Lineage;
 import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.*;
-import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.unit.Inhibitor;
+import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.unit.Bang;
 import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.unit.quantifier.OneOrMore;
 import org.x96.sys.foundation.cs.ast.book.passage.pattern.core.unit.quantifier.ZeroOrMore;
 import org.x96.sys.foundation.cs.ir.manuscript.manifest.characterization.facet.Track;
@@ -24,7 +24,7 @@ class LineageToTrackTest {
         Nucleus convert = new CoreToNucleus().convert(hex);
         assertInstanceOf(Natural.class, convert);
 
-        Inhibitor i = new Inhibitor('!');
+        Bang i = new Bang((byte) '!');
         Unit unit = new Unit(Optional.of(i), new Glyph("cs".getBytes()), Optional.empty());
         convert = new CoreToNucleus().convert(unit);
         assertInstanceOf(Term.class, convert);

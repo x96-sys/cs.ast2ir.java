@@ -8,7 +8,7 @@ SRC_TEST      = src/test
 TOOL_DIR      = tools
 LIB_DIR       = lib
 
-CS_AST_VERSION = 0.1.2
+CS_AST_VERSION = 0.2.2
 CS_AST_JAR     = $(LIB_DIR)/org.x96.sys.foundation.cs.ast.jar
 CS_AST_URL     = https://github.com/x96-sys/cs.ast.java/releases/download/v$(CS_AST_VERSION)/org.x96.sys.foundation.cs.ast.jar
 
