@@ -8,7 +8,7 @@ public class UnitToTerm implements ToTerm {
     @Override
     public Term convert(Unit unit) {
         return new Term(
-                unit.inhibitor().isPresent(),
+                unit.bang().isPresent(),
                 new GlyphToIdentity().convert(unit.glyph()),
                 new QuantifierToOccurrence().convert(unit.quantifier()));
     }
